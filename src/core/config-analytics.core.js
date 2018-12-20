@@ -22,4 +22,4 @@ class ConfigAnalytics extends _ConfigInterface {
     }
 };
 
-export default ConfigTracker;
+export default ConfigAnalytics;
