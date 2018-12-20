@@ -1,7 +1,7 @@
 {
-  "name": "@kraftvaerk/data-core",
+  "name": "@kraftvaerk/config-core",
   "version": "0.1.0",
-  "description": "endpoint fetch request http ajax",
+  "description": "environment specific log, track, analytics, etc.",
   "main": "dist/index.js",
   "scripts": {
     "debug": "echo \"NOT IMPLEMENTED: coming soon...\" && exit 1",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kraftvaerk/data-core-js.git"
+    "url": "git+https://github.com/kraftvaerk/config-core-js.git"
   },
   "author": {
     "name": "Kraftvaerk",
@@ -18,9 +18,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kraftvaerk/data-core-js/issues"
+    "url": "https://github.com/kraftvaerk/config-core-js/issues"
   },
-  "homepage": "https://github.com/kraftvaerk/data-core-js#readme",
+  "homepage": "https://github.com/kraftvaerk/config-core-js#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.1",
