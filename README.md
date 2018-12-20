@@ -1,8 +1,8 @@
 # 1.	import required references
 ```javascript
 
-import { ConfigDebug, ConfigAnalytics, ConfigEndpoint, ConfigGenerator } from 'app-config-gen';
-import { Endpoint } from 'app-data-layer'; 
+import { ConfigDebug, ConfigAnalytics, ConfigEndpoint, ConfigGenerator } from '@kraftvaerk/config-core';
+import { Endpoint } from '@krafvaerk/data-core'; 
 
 ```
 
@@ -42,11 +42,11 @@ const configAnalytics = new ConfigAnalytics(env);
 configAnalytics.register({
     'local': {
         tags: [],
-        track: (name, title, events, type, data, dependencies) => { console.log(arugments); }
+        track: (args) => { console.log(args); }
     }, 
     'production': {
         tags: [],
-        track: (name, title, events, type, data, dependencies) => { /* import the relevant tracker function */ }
+        track: (args) => { /* import the relevant tracker function */ }
     } 
 });
 
@@ -68,9 +68,9 @@ configEndpoint.register({
         'submit': new _Endpoint(method, url, data)
     }, 
     'production': {
-        'resources': new _Endpoint(method, url, data),
-        'model': new _Endpoint(method, url, data),
-        'submit': new _Endpoint(method, url, data)
+        'resources': new _Endpoint(method, url),
+        'model': new _Endpoint(method, url),
+        'submit': new _Endpoint(method, url)
     }
 });
 
@@ -88,7 +88,7 @@ const config = ConfigGenerator.generate({}, configDebug, configAnalytics, config
 
 ```
 
-# 7. 	initialize the application
+# 7. 	initialize the application (react sample)
 
 ```javascript
 
